@@ -1,2 +1,321 @@
 Update started at Tue Mar 10 10:14:31 PM PKT 2026
 System updated successfully at Tue Mar 10 10:15:07 PM PKT 2026
+Update started at Wed Mar 11 09:24:00 PM PKT 2026
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 https://packages.microsoft.com/repos/code stable InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:6 https://ppa.launchpadcontent.net/libreoffice/ppa/ubuntu noble InRelease
+Hit:7 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:8 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+16 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  vlc-plugin-qt libvlc5 libmagickcore-6.q16-7t64 libzvbi-common vlc-data
+  libvlccore9 qt5-gtk-platformtheme vlc imagemagick vlc-bin
+  libmagickcore-6.q16-7-extra vlc-l10n libcjson1 libpostproc57
+  vlc-plugin-samba libqt5gui5t64 libavcodec60 libzvbi0t64 vlc-plugin-notify
+  libavutil58 libqt5widgets5t64 imagemagick-6.q16 libswscale7 libqt5dbus5t64
+  vlc-plugin-access-extra libqt5network5t64 vlc-plugin-skins2
+  vlc-plugin-video-splitter libswresample4 imagemagick-6-common
+  vlc-plugin-video-output libavformat60 libvlc-bin libqt5core5t64
+  vlc-plugin-base vlc-plugin-visualization libavfilter9
+  libmagickwand-6.q16-7t64
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following upgrades have been deferred due to phasing:
+  gir1.2-gtk-4.0 gir1.2-nm-1.0 libgtk-4-1 libgtk-4-bin libgtk-4-common
+  libgtk-4-media-gstreamer libnftables1 libnm0 network-manager
+  network-manager-config-connectivity-ubuntu network-manager-openvpn
+  network-manager-openvpn-gnome nftables
+The following packages will be upgraded:
+  curl libcurl3t64-gnutls libcurl4t64
+3 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+3 standard LTS security updates
+Need to get 902 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://security.ubuntu.com/ubuntu noble-security/main amd64 curl amd64 8.5.0-2ubuntu10.8 [227 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.8 [342 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.8 [334 kB]
+Fetched 902 kB in 13s (70.1 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 249041 files and directories currently installed.)
+Preparing to unpack .../curl_8.5.0-2ubuntu10.8_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.8) over (8.5.0-2ubuntu10.7) ...
+Preparing to unpack .../libcurl4t64_8.5.0-2ubuntu10.8_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.8) over (8.5.0-2ubuntu10.7) ...
+Preparing to unpack .../libcurl3t64-gnutls_8.5.0-2ubuntu10.8_amd64.deb ...
+Unpacking libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.8) over (8.5.0-2ubuntu10.7) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.8) ...
+Setting up libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.8) ...
+Setting up curl (8.5.0-2ubuntu10.8) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+System updated successfully at Wed Mar 11 09:25:04 PM PKT 2026
+Update started at Wed Mar 11 09:25:15 PM PKT 2026
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:6 https://packages.microsoft.com/repos/code stable InRelease
+Hit:7 https://ppa.launchpadcontent.net/libreoffice/ppa/ubuntu noble InRelease
+Hit:8 https://dl.google.com/linux/chrome/deb stable InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  vlc-plugin-qt libvlc5 libmagickcore-6.q16-7t64 libzvbi-common vlc-data
+  libvlccore9 qt5-gtk-platformtheme vlc imagemagick vlc-bin
+  libmagickcore-6.q16-7-extra vlc-l10n libcjson1 libpostproc57
+  vlc-plugin-samba libqt5gui5t64 libavcodec60 libzvbi0t64 vlc-plugin-notify
+  libavutil58 libqt5widgets5t64 imagemagick-6.q16 libswscale7 libqt5dbus5t64
+  vlc-plugin-access-extra libqt5network5t64 vlc-plugin-skins2
+  vlc-plugin-video-splitter libswresample4 imagemagick-6-common
+  vlc-plugin-video-output libavformat60 libvlc-bin libqt5core5t64
+  vlc-plugin-base vlc-plugin-visualization libavfilter9
+  libmagickwand-6.q16-7t64
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following upgrades have been deferred due to phasing:
+  gir1.2-gtk-4.0 gir1.2-nm-1.0 libgtk-4-1 libgtk-4-bin libgtk-4-common
+  libgtk-4-media-gstreamer libnftables1 libnm0 network-manager
+  network-manager-config-connectivity-ubuntu network-manager-openvpn
+  network-manager-openvpn-gnome nftables
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+System updated successfully at Wed Mar 11 09:25:24 PM PKT 2026
+Update started at Wed Mar 11 09:25:46 PM PKT 2026
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 https://packages.microsoft.com/repos/code stable InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:5 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:7 https://ppa.launchpadcontent.net/libreoffice/ppa/ubuntu noble InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  vlc-plugin-qt libvlc5 libmagickcore-6.q16-7t64 libzvbi-common vlc-data
+  libvlccore9 qt5-gtk-platformtheme vlc imagemagick vlc-bin
+  libmagickcore-6.q16-7-extra vlc-l10n libcjson1 libpostproc57
+  vlc-plugin-samba libqt5gui5t64 libavcodec60 libzvbi0t64 vlc-plugin-notify
+  libavutil58 libqt5widgets5t64 imagemagick-6.q16 libswscale7 libqt5dbus5t64
+  vlc-plugin-access-extra libqt5network5t64 vlc-plugin-skins2
+  vlc-plugin-video-splitter libswresample4 imagemagick-6-common
+  vlc-plugin-video-output libavformat60 libvlc-bin libqt5core5t64
+  vlc-plugin-base vlc-plugin-visualization libavfilter9
+  libmagickwand-6.q16-7t64
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following upgrades have been deferred due to phasing:
+  gir1.2-gtk-4.0 gir1.2-nm-1.0 libgtk-4-1 libgtk-4-bin libgtk-4-common
+  libgtk-4-media-gstreamer libnftables1 libnm0 network-manager
+  network-manager-config-connectivity-ubuntu network-manager-openvpn
+  network-manager-openvpn-gnome nftables
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+System updated successfully at Wed Mar 11 09:25:53 PM PKT 2026
+Update started at Wed Mar 11 09:29:11 PM PKT 2026
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 https://packages.microsoft.com/repos/code stable InRelease
+Hit:4 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:7 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:8 https://ppa.launchpadcontent.net/libreoffice/ppa/ubuntu noble InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  vlc-plugin-qt libvlc5 libmagickcore-6.q16-7t64 libzvbi-common vlc-data
+  libvlccore9 qt5-gtk-platformtheme vlc imagemagick vlc-bin
+  libmagickcore-6.q16-7-extra vlc-l10n libcjson1 libpostproc57
+  vlc-plugin-samba libqt5gui5t64 libavcodec60 libzvbi0t64 vlc-plugin-notify
+  libavutil58 libqt5widgets5t64 imagemagick-6.q16 libswscale7 libqt5dbus5t64
+  vlc-plugin-access-extra libqt5network5t64 vlc-plugin-skins2
+  vlc-plugin-video-splitter libswresample4 imagemagick-6-common
+  vlc-plugin-video-output libavformat60 libvlc-bin libqt5core5t64
+  vlc-plugin-base vlc-plugin-visualization libavfilter9
+  libmagickwand-6.q16-7t64
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following upgrades have been deferred due to phasing:
+  gir1.2-gtk-4.0 gir1.2-nm-1.0 libgtk-4-1 libgtk-4-bin libgtk-4-common
+  libgtk-4-media-gstreamer libnftables1 libnm0 network-manager
+  network-manager-config-connectivity-ubuntu network-manager-openvpn
+  network-manager-openvpn-gnome nftables
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+System updated successfully at Wed Mar 11 09:29:23 PM PKT 2026
+Update started at Wed Mar 11 09:33:28 PM PKT 2026
+----------------------------------------
+Maintenance started at Wed Mar 11 09:33:28 PM PKT 2026
+Updating package lists...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Ign:1 https://ppa.launchpadcontent.net/libreoffice/ppa/ubuntu noble InRelease
+Hit:2 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:4 https://packages.microsoft.com/repos/code stable InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:7 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Ign:1 https://ppa.launchpadcontent.net/libreoffice/ppa/ubuntu noble InRelease
+Hit:1 https://ppa.launchpadcontent.net/libreoffice/ppa/ubuntu noble InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Upgrading packages...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  vlc-plugin-qt libvlc5 libmagickcore-6.q16-7t64 libzvbi-common vlc-data
+  libvlccore9 qt5-gtk-platformtheme vlc imagemagick vlc-bin
+  libmagickcore-6.q16-7-extra vlc-l10n libcjson1 libpostproc57
+  vlc-plugin-samba libqt5gui5t64 libavcodec60 libzvbi0t64 vlc-plugin-notify
+  libavutil58 libqt5widgets5t64 imagemagick-6.q16 libswscale7 libqt5dbus5t64
+  vlc-plugin-access-extra libqt5network5t64 vlc-plugin-skins2
+  vlc-plugin-video-splitter libswresample4 imagemagick-6-common
+  vlc-plugin-video-output libavformat60 libvlc-bin libqt5core5t64
+  vlc-plugin-base vlc-plugin-visualization libavfilter9
+  libmagickwand-6.q16-7t64
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following upgrades have been deferred due to phasing:
+  gir1.2-gtk-4.0 gir1.2-nm-1.0 libgtk-4-1 libgtk-4-bin libgtk-4-common
+  libgtk-4-media-gstreamer libnftables1 libnm0 network-manager
+  network-manager-config-connectivity-ubuntu network-manager-openvpn
+  network-manager-openvpn-gnome nftables
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+Removing unused packages...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+Cleaning package cache...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Del linux-libc-dev 6.8.0-94.96 [1,932 kB]
+Del google-chrome-stable 145.0.7632.159-1 [121 MB]
+Del google-chrome-stable 145.0.7632.116-1 [121 MB]
+Del libpng16-16t64 1.6.43-5ubuntu0.3 [13.7 kB]
+Maintenance completed successfully at Wed Mar 11 09:33:45 PM PKT 2026
+----------------------------------------
+Update started at Wed Mar 11 09:36:17 PM PKT 2026
+----------------------------------------
+Maintenance started at Wed Mar 11 09:36:17 PM PKT 2026
+Updating package lists...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 https://packages.microsoft.com/repos/code stable InRelease
+Hit:3 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:5 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:6 https://ppa.launchpadcontent.net/libreoffice/ppa/ubuntu noble InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Upgrading packages...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  vlc-plugin-qt libvlc5 libmagickcore-6.q16-7t64 libzvbi-common vlc-data
+  libvlccore9 qt5-gtk-platformtheme vlc imagemagick vlc-bin
+  libmagickcore-6.q16-7-extra vlc-l10n libcjson1 libpostproc57
+  vlc-plugin-samba libqt5gui5t64 libavcodec60 libzvbi0t64 vlc-plugin-notify
+  libavutil58 libqt5widgets5t64 imagemagick-6.q16 libswscale7 libqt5dbus5t64
+  vlc-plugin-access-extra libqt5network5t64 vlc-plugin-skins2
+  vlc-plugin-video-splitter libswresample4 imagemagick-6-common
+  vlc-plugin-video-output libavformat60 libvlc-bin libqt5core5t64
+  vlc-plugin-base vlc-plugin-visualization libavfilter9
+  libmagickwand-6.q16-7t64
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following upgrades have been deferred due to phasing:
+  gir1.2-gtk-4.0 gir1.2-nm-1.0 libgtk-4-1 libgtk-4-bin libgtk-4-common
+  libgtk-4-media-gstreamer libnftables1 libnm0 network-manager
+  network-manager-config-connectivity-ubuntu network-manager-openvpn
+  network-manager-openvpn-gnome nftables
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+Removing unused packages...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+Cleaning package cache...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Maintenance completed successfully at Wed Mar 11 09:36:26 PM PKT 2026
+----------------------------------------
