@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 LOG_FILE="./update.log"
 
 echo "Update started at $(date)" >> "$LOG_FILE"
@@ -16,6 +18,9 @@ sudo apt update >> "$LOG_FILE" 2>&1
 echo "Upgrading packages..." >> "$LOG_FILE"
 sudo apt upgrade -y >> "$LOG_FILE" 2>&1
 
+echo "Upgrading packages..." >> "$LOG_FILE"
+sudo apt full-upgrade -y >> "$LOG_FILE" 2>&1
+
 # Remove unnecessary packages
 echo "Removing unused packages..." >> "$LOG_FILE"
 sudo apt autoremove -y >> "$LOG_FILE" 2>&1
@@ -24,11 +29,12 @@ sudo apt autoremove -y >> "$LOG_FILE" 2>&1
 echo "Cleaning package cache..." >> "$LOG_FILE"
 sudo apt autoclean >> "$LOG_FILE" 2>&1
 
-# Check if everything succeeded
-if [ $? -eq 0 ]; then
-    echo "Maintenance completed successfully at $(date)" >> "$LOG_FILE"
+
+if [ -f /var/run/reboot-required ]; then
+    echo "System Reboot required"
 else
-    echo "Maintenance encountered errors at $(date)" >> "$LOG_FILE"
+    echo "No reboot required."
 fi
 
-echo "----------------------------------------" >> "$LOG_FILE"
+echo "Maintenance completed successfully: $(date)"
+echo "======================================"
