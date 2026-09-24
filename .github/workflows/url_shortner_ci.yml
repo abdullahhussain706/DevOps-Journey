@@ -2,12 +2,19 @@ name: url-shortner-ci
 
 on:
   push:
+    paths:
+      - "Url-Shortner/**"
+      - ".github/workflows/url_shortner_ci.yml"
+
   pull_request:
+    paths:
+      - "Url-Shortner/**"
+      - ".github/workflows/url_shortner_ci.yml"
 
 jobs:
   tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkoutcode
-        uses: actions/checkoutcode@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
