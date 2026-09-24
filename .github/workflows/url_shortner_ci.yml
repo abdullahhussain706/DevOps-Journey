@@ -17,10 +17,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        run: actions/checkout@v4
 
       - name: Install ruff
         uses: pip install ruff
 
       - name: Run Linter
-        uses: ruff check Url-Shortner/backend
+        run: ruff check Url-Shortner/backend
