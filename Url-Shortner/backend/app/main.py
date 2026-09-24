@@ -27,7 +27,7 @@ def root():
 @app.post("/api/urls")
 def create_url(data: URLCreate):
     code = generate_short_code()
-    short_url = f'http://127.0.0.1:8000/{code}'
+    short_url = f'http://localhost:8080/{code}'
     urls[code] = data.original_url
 
     return {
