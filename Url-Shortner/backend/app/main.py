@@ -1,9 +1,11 @@
-from fastapi import FastAPI
-from fastapi.responses import RedirectResponse
-from app.schemas.url import URLCreate
-from fastapi.middleware.cors import CORSMiddleware
 import secrets
 import string
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse
+
+from app.schemas.url import URLCreate
 
 app = FastAPI()
 app.add_middleware(
