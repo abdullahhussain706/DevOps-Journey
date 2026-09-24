@@ -1,0 +1,13 @@
+name: url-shortner-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkoutcode
+        uses: actions/checkoutcode@v4
