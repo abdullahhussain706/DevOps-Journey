@@ -1,0 +1,18 @@
+services:
+  frontend:
+    image: url-shortner-frontend:latest
+    build:
+      context: ./frontend
+      
+    ports:
+      - "8080:80"
+    restart:
+      unless-stopped
+
+  backend:
+    image: url-shortner-backend:latest
+    build:
+      context: ./backend
+
+    restart:
+      unless-stopped
