@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Pyhton
-        uses: actions/set-python@v5
+        uses: actions/setup-python@v5
         with:
           pyhton-version: "3.12"
 
