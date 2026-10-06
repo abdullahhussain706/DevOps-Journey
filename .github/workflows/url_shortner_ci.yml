@@ -24,6 +24,9 @@ jobs:
         with:
           pyhton-version: "3.12"
 
+      - name: install backend dependencies
+        run: pip install -r Url-Shortner/backend/requirements.txt
+
       - name: Install ruff
         run: pip install ruff
 
