@@ -27,8 +27,8 @@ jobs:
       - name: install backend dependencies
         run: pip install -r Url-Shortner/backend/requirements.txt
 
-      - name: insatll development dependencies
-        run: pip insatll -r Url-Shortner/backend/requirements-dev.txt
+      - name: install development dependencies
+        run: pip install -r Url-Shortner/backend/requirements-dev.txt
 
       - name: Run Linter
         run: ruff check Url-Shortner/backend
