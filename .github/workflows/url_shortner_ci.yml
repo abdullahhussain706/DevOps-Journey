@@ -34,4 +34,5 @@ jobs:
         run: ruff check Url-Shortner/backend
 
       - name: Run tests
-        run: python -m pytest Url-Shortner/backend/tests
+        working-directory: Url-Shortner/backend
+        run: python -m pytest
