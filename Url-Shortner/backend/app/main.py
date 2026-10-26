@@ -1,10 +1,14 @@
 import secrets
 import string
 
-from app.schemas.url import URLCreate
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
+from sqlalchemy.orm import Session
+
+from app.database import get_db
+from app.models import URL
+from app.schemas.url import URLCreate
 
 app = FastAPI()
 app.add_middleware(
@@ -15,8 +19,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-urls = {}
-
 
 @app.get("/")
 def root():
@@ -26,10 +28,17 @@ def root():
 
 
 @app.post("/api/urls")
-def create_url(data: URLCreate):
+def create_url(data: URLCreate, db: Session = Depends(get_db)):
     code = generate_short_code()
     short_url = f'http://localhost:8080/{code}'
-    urls[code] = data.original_url
+
+    new_url = URL(
+        original_url = data.original_url,
+        short_code = code
+    )
+
+    db.add(new_url)
+    db.commit()
 
     return {
         "original_url": data.original_url,
@@ -44,8 +53,12 @@ def generate_short_code():
     return code
 
 @app.get("/{short_code}")
-def redirect_to_url(short_code: str):
-    original_url = urls[short_code]
+def redirect_to_url(short_code: str, db: Session = Depends(get_db)):
+    url_record = db.query(URL).filter(
+        URL.short_code == short_code).first()
 
-    return RedirectResponse(url=original_url)
+    if url_record is None:
+        return{"error": "Short URL not Found"}
+    
+    return RedirectResponse(url=url_record.original_url)
 
