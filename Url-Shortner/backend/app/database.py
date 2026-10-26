@@ -2,8 +2,8 @@
 import os
 
 from sqlalchemy import create_engine, text
-from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.orm import declarative_base, sessionmaker
 
 DATABASE_URL = (
     f"postgresql+psycopg://"

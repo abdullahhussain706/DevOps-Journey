@@ -3,8 +3,6 @@ from sqlalchemy import Column, DateTime, Integer, String
 from sqlalchemy.sql import func
 
 
-
-
 class URL(Base):
     __tablename__ = "urls"
 
