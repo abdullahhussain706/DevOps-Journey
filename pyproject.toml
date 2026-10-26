@@ -1,0 +1,3 @@
+
+[tool.ruff.lint.per-file-ignores]
+"Url-Shortner/backend/app/main.py" = ["B008"]

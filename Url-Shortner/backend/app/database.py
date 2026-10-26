@@ -3,6 +3,7 @@ import os
 
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import declarative_base, sessionmaker
+from sqlalchemy.exc import SQLAlchemyError
 
 DATABASE_URL = (
     f"postgresql+psycopg://"
@@ -29,7 +30,7 @@ def verify_database_connection():
             result = connection.execute(text("SELECT 1"))
             return result.scalar_one() == 1
         
-    except Exception as error:
+    except SQLAlchemyError as error:
         print(f"Database connection failed: {error}")
         return False
 
