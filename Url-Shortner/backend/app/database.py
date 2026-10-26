@@ -28,6 +28,7 @@ def verify_database_connection():
         with engine.connect() as connection:
             result = connection.execute(text("SELECT 1"))
             return result.scalar_one() == 1
+        
     except Exception as error:
         print(f"Database connection failed: {error}")
         return False

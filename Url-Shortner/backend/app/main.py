@@ -1,14 +1,14 @@
 import secrets
 import string
 
+from app.database import get_db
+from app.models import URL
+from app.schemas.url import URLCreate
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from app.database import get_db
-from app.models import URL
-from app.schemas.url import URLCreate
 
 app = FastAPI()
 app.add_middleware(
