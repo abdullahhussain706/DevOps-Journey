@@ -22,7 +22,7 @@ jobs:
       - name: Set up Pyhton
         uses: actions/setup-python@v5
         with:
-          pyhton-version: "3.12"
+          python-version: "3.12"
 
       - name: install backend dependencies
         run: pip install -r Url-Shortner/backend/requirements.txt
@@ -36,3 +36,7 @@ jobs:
       - name: Run tests
         working-directory: Url-Shortner/backend
         run: python -m pytest
+        env:
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+          POSTGRES_DB: test_db
