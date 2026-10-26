@@ -5,38 +5,59 @@ on:
     paths:
       - "Url-Shortner/**"
       - ".github/workflows/url_shortner_ci.yml"
+      - "pyproject.toml"
 
   pull_request:
     paths:
       - "Url-Shortner/**"
       - ".github/workflows/url_shortner_ci.yml"
+      - "pyproject.toml"
 
 jobs:
   tests:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+          POSTGRES_DB: test_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U test_user -d test_db"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Pyhton
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: install backend dependencies
+      - name: Install backend dependencies
         run: pip install -r Url-Shortner/backend/requirements.txt
 
-      - name: install development dependencies
+      - name: Install development dependencies
         run: pip install -r Url-Shortner/backend/requirements-dev.txt
 
       - name: Run Linter
         run: ruff check Url-Shortner/backend
 
+      - name: Run database migrations
+        working-directory: Url-Shortner/backend
+        run: alembic upgrade head
+        env:
+          DATABASE_URL: postgresql+psycopg://test_user:test_password@localhost:5432/test_db
+
       - name: Run tests
         working-directory: Url-Shortner/backend
         run: python -m pytest
         env:
-          POSTGRES_USER: test_user
-          POSTGRES_PASSWORD: test_password
-          POSTGRES_DB: test_db
+          DATABASE_URL: postgresql+psycopg://test_user:test_password@localhost:5432/test_db

@@ -5,13 +5,16 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-DATABASE_URL = (
-    f"postgresql+psycopg://"
-    f"{os.environ['POSTGRES_USER']}:"
-    f"{os.environ['POSTGRES_PASSWORD']}@"
-    f"db:5432/"
-    f"{os.environ['POSTGRES_DB']}"
-)
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    DATABASE_URL = (
+        "postgresql+psycopg://"
+        f"{os.environ['POSTGRES_USER']}:"
+        f"{os.environ['POSTGRES_PASSWORD']}@"
+        f"{os.getenv('POSTGRES_HOST', 'db')}:5432/"
+        f"{os.environ['POSTGRES_DB']}"
+    )
 
 Base = declarative_base()
 
