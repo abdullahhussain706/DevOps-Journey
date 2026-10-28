@@ -2,12 +2,16 @@ name: url-shortner-ci
 
 on:
   push:
+    branches:
+    - "feature-**"
     paths:
       - "Url-Shortner/**"
       - ".github/workflows/url_shortner_ci.yml"
       - "pyproject.toml"
 
   pull_request:
+    branches:
+      - main
     paths:
       - "Url-Shortner/**"
       - ".github/workflows/url_shortner_ci.yml"
