@@ -3,7 +3,8 @@ name: url-shortner-ci
 on:
   push:
     branches:
-    - "feature-**"
+    - "feature-*"
+    - main
     paths:
       - "Url-Shortner/**"
       - ".github/workflows/url_shortner_ci.yml"
@@ -65,3 +66,39 @@ jobs:
         run: python -m pytest
         env:
           DATABASE_URL: postgresql+psycopg://test_user:test_password@localhost:5432/test_db
+
+  publish:
+   runs-on: ubuntu-latest
+   needs: tests
+   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+   steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Login to Dockerhub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build and Push frontend image
+      uses: docker/build-push-action@v6
+      with:
+        context: ./Url-Shortner/frontend
+        file: ./Url-Shortner/frontend/Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/url-shortner-frontend:v1
+
+    - name: Build and Push backend image
+      uses: docker/build-push-action@v6
+      with:
+        context: ./Url-Shortner/backend
+        file: ./Url-Shortner/backend/Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/url-shortner-backend:v1
+      
+
