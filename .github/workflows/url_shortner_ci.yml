@@ -3,7 +3,7 @@ name: url-shortner-ci
 on:
   push:
     branches:
-    - "feature-**"\
+    - "feature-*"
     - main
     paths:
       - "Url-Shortner/**"
