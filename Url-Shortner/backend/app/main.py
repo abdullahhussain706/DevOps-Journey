@@ -22,7 +22,7 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {
-        "message": "URL Shortener API is running"
+        "message": "URL Shortener API is running successfully..."
     }
 
 
