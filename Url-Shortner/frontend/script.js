@@ -85,15 +85,6 @@ copyButton.addEventListener("click", async function () {
 });
 
 
-function isValidUrl(value) {
-    try {
-        new URL(value);
-        return true;
-    } catch {
-        return false;
-    }
-}
-
 
 function showError(message) {
     errorMessage.textContent = message;
@@ -104,4 +95,19 @@ function showError(message) {
 function hideError() {
     errorMessage.textContent = "";
     errorMessage.classList.add("hidden");
+}
+
+function isValidUrl(value) {
+    try {
+        const url = new URL(value);
+
+        return (
+            (url.protocol === "http:" || url.protocol === "https:") &&
+            url.hostname.includes(".") &&
+            !url.hostname.startsWith(".") &&
+            !url.hostname.endsWith(".")
+        );
+    } catch {
+        return false;
+    }
 }
