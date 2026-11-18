@@ -37,4 +37,4 @@ def test_redirect_to_original_url():
     )
 
     assert redirect_response.status_code == 307
-    assert redirect_response.headers["location"] == "https://www.google.com"
+    assert redirect_response.headers["location"] == "https://www.google.com/"
