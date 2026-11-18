@@ -8,6 +8,7 @@ on:
       - main
     paths:
       - "Url-Shortner/**"
+      - "!Url-Shortner/terraform/**"
       - ".github/workflows/url_shortner_ci.yml"
       - "pyproject.toml"
 
@@ -16,6 +17,7 @@ on:
       - main
     paths:
       - "Url-Shortner/**"
+      - "!Url-Shortner/terraform/**"
       - ".github/workflows/url_shortner_ci.yml"
       - "pyproject.toml"
 
