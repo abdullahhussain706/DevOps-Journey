@@ -29,20 +29,19 @@ def root():
 @app.post("/api/urls")
 def create_url(data: URLCreate, db: Session = Depends(get_db)):
     code = generate_short_code()
-    short_url = f'http://localhost:8080/{code}'
 
     new_url = URL(
-        original_url = data.original_url,
-        short_code = code
+        original_url=str(data.original_url),
+        short_code=code
     )
 
     db.add(new_url)
     db.commit()
+    db.refresh(new_url)
 
     return {
-        "original_url": data.original_url,
-        "short_code": code,
-        "short_url": short_url
+        "original_url": str(data.original_url),
+        "short_code": code
     }
 
 
