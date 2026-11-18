@@ -1,13 +1,11 @@
+
 const form = document.getElementById("shorten-form");
 const originalUrlInput = document.getElementById("original-url");
-const customAliasInput = document.getElementById("custom-alias");
 
 const result = document.getElementById("result");
 const shortUrlInput = document.getElementById("short-url");
 const copyButton = document.getElementById("copy-button");
-
 const errorMessage = document.getElementById("error-message");
-
 
 form.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -22,20 +20,15 @@ form.addEventListener("submit", async function (event) {
     }
 
     try {
-        const response = await fetch(
-            "/api/urls",
-            {
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify({
-                    original_url: originalUrl
-                })
-            }
-        );
+        const response = await fetch("/api/urls", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                original_url: originalUrl
+            })
+        });
 
         const data = await response.json();
 
@@ -44,7 +37,9 @@ form.addEventListener("submit", async function (event) {
             return;
         }
 
-        shortUrlInput.value = data.short_url;
+        // Build the short URL using the current website address.
+        shortUrlInput.value =
+            `${window.location.origin}/${data.short_code}`;
 
         result.classList.remove("hidden");
 
@@ -63,7 +58,19 @@ copyButton.addEventListener("click", async function () {
     }
 
     try {
-        await navigator.clipboard.writeText(shortUrl);
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(shortUrl);
+        } else {
+            // Fallback for HTTP websites.
+            shortUrlInput.select();
+            shortUrlInput.setSelectionRange(0, 99999);
+
+            const copied = document.execCommand("copy");
+
+            if (!copied) {
+                throw new Error("Copy failed");
+            }
+        }
 
         copyButton.textContent = "Copied!";
 
@@ -72,7 +79,8 @@ copyButton.addEventListener("click", async function () {
         }, 1500);
 
     } catch (error) {
-        showError("Unable to copy the URL.");
+        console.error(error);
+        showError("Please copy the URL manually.");
     }
 });
 
